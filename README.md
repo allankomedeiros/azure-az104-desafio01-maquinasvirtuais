@@ -34,33 +34,15 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 ###VNet e Peering
 - VNet é a rede virtual do Azure, equivalente a LAN no datacenter.
 - **Peering** conecta VNets, permitindo comunicação sem VPN.
-- [Modelo ARM de VNet criada](./arm/vnet-template.json)
-- [Modelo BICEPS de VNet criada](./biceps/vnet-template.biceps)
+- [Modelo ARM de VNet criada nos laborátórios práticos](./arm/vnet-template.json)
+- [Modelo BICEPS de VNet criada nos laborátórios práticos](./biceps/vnet-template.biceps)
   
 ###NSG e ASG
 - **NSG (Network Security Group):** controla tráfego para subnets ou NICs.
 - **ASG (Application Security Group):** agrupa VMs por função, facilitando regras no NSG.
+- 
 
 ###Storage Accounts
 - Usado para armazenar blobs, files, tables e queues.
 - Ideal para backups, imagens de VM e dados de app.
 
-###Monitoramento com Azure Monitor e Log Analytics
-- Azure Monitor coleta métricas e logs.
-- Log Analytics permite queries avançadas com Kusto Query Language (KQL).
-
-###Backup e Recovery
-- Recovery Services Vault gerencia backups e pontos de restauração.
-- Protege VMs, bancos SQL e outros recursos.
-
-###Azure CLI e PowerShell
-- Automatizam deploys e gerenciamento.
-- Exemplo para criar uma VM:
-
-
-az vm create \
-  --resource-group MeuRG \
-  --name MinhaVM \
-  --image UbuntuLTS \
-  --admin-username azureuser \
-  --generate-ssh-keys
