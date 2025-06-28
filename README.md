@@ -35,7 +35,7 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 - VNet é a rede virtual do Azure, equivalente a LAN no datacenter.
 - **Peering** conecta VNets, permitindo comunicação sem VPN.
 - [Modelo ARM de VNet criada](./arm/vnet-template.json)
-- [Modelo BICEPS de VNet criada](./biceps/vnet-template.json)
+- [Modelo BICEPS de VNet criada](./biceps/vnet-template.biceps)
   
 ###NSG e ASG
 - **NSG (Network Security Group):** controla tráfego para subnets ou NICs.
