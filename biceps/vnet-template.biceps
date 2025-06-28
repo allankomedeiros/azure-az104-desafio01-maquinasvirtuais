@@ -1,1 +1,54 @@
+param virtualNetworks_VNET_CURSOAZURE_name string = 'VNET_CURSOAZURE'
+
+resource virtualNetworks_VNET_CURSOAZURE_name_resource 'Microsoft.Network/virtualNetworks@2024-05-01' = {
+  name: virtualNetworks_VNET_CURSOAZURE_name
+  location: 'eastus'
+  tags: {
+    CCUSTO: '1000'
+  }
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        '10.0.0.0/16'
+      ]
+    }
+    encryption: {
+      enabled: false
+      enforcement: 'AllowUnencrypted'
+    }
+    privateEndpointVNetPolicies: 'Disabled'
+    subnets: [
+      {
+        name: 'default'
+        id: virtualNetworks_VNET_CURSOAZURE_name_default.id
+        properties: {
+          addressPrefixes: [
+            '10.0.0.0/24'
+          ]
+          delegations: []
+          privateEndpointNetworkPolicies: 'Disabled'
+          privateLinkServiceNetworkPolicies: 'Enabled'
+        }
+        type: 'Microsoft.Network/virtualNetworks/subnets'
+      }
+    ]
+    virtualNetworkPeerings: []
+    enableDdosProtection: false
+  }
+}
+
+resource virtualNetworks_VNET_CURSOAZURE_name_default 'Microsoft.Network/virtualNetworks/subnets@2024-05-01' = {
+  name: '${virtualNetworks_VNET_CURSOAZURE_name}/default'
+  properties: {
+    addressPrefixes: [
+      '10.0.0.0/24'
+    ]
+    delegations: []
+    privateEndpointNetworkPolicies: 'Disabled'
+    privateLinkServiceNetworkPolicies: 'Enabled'
+  }
+  dependsOn: [
+    virtualNetworks_VNET_CURSOAZURE_name_resource
+  ]
+}
 
