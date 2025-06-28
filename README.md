@@ -18,6 +18,7 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
   - **Contributor:** cria e gerencia recursos, mas não gerencia permissões.
   - **Reader:** só leitura.
 - Boa prática: sempre aplicar o princípio do menor privilégio.
+- As permissões podem ser dadas ao resource group, na assinatura ou no recurso.
 
 ###Azure Policy
 - Garantem compliance e governança.
@@ -33,7 +34,8 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 ###VNet e Peering
 - VNet é a rede virtual do Azure, equivalente a LAN no datacenter.
 - **Peering** conecta VNets, permitindo comunicação sem VPN.
-
+- Modelo ARM de exemplo:
+  
 ###NSG e ASG
 - **NSG (Network Security Group):** controla tráfego para subnets ou NICs.
 - **ASG (Application Security Group):** agrupa VMs por função, facilitando regras no NSG.
@@ -54,7 +56,7 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 - Automatizam deploys e gerenciamento.
 - Exemplo para criar uma VM:
 
-```bash
+
 az vm create \
   --resource-group MeuRG \
   --name MinhaVM \
