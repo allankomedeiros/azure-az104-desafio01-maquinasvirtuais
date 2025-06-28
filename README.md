@@ -34,7 +34,7 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 ###VNet e Peering
 - VNet é a rede virtual do Azure, equivalente a LAN no datacenter.
 - **Peering** conecta VNets, permitindo comunicação sem VPN.
-- Modelo ARM de exemplo:
+- [Modelo ARM da VNet criada](./arm/vnet-template.json)
   
 ###NSG e ASG
 - **NSG (Network Security Group):** controla tráfego para subnets ou NICs.
