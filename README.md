@@ -47,4 +47,27 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 ###Storage Accounts
 - Usado para armazenar blobs, files, tables e queues.
 - Ideal para backups, imagens de VM e dados de app.
+- Tipos de replicação:
+  - LRS(Local redundante storage) - três replicas na mesma região(dentro do mesmo datacenter em racks diferentes);
+  - Z(ZONA)RS - Três replicas, três zonas, uma região - Síncrona;
+  - G(Geo)RS - Seis réplicas, duas regiões(três por região) - Cópia Assincrona para a secundária - Não pode consultar direto na secundária, apenas com indisponibilidade;
+  - RA - GRS  - Mesmo que o GRS, mas permite read acess na secundária;
+  - GZRS - Seis réplicas, 3+1 zonas, duas regiões - Gravação síncrona nas três zonas e assíncrona para secundária
+  - RA-GZRS - GZRS , mais acesso read acess na secundária.
+
+-Cada objeto tem um endereço de URL exclusivo
+-Exemplo
+  -https://mystorageaccount.blob.core.windows.net
+  -https://mystorageaccount.queue.core.windows.net
+  -https://mystorageaccount.table.core.windows.net
+  -https://mystorageaccount.file.core.windows.ne
+
+- Tierização:
+  -Camada de acesso principal - hot
+  -Camada fria(cool) - Pouca frequência de acesso e/ou modificação e armazenados por pelo menos 30 dias. Maior gasto se precisar acessar o arquivo
+  -Camada de acesso frio(cold) - Pouca frequência de acesso e/ou modificação e armazenados por pelo menos 90 dias. Maior gasto se precisar acessar o arquivo
+  -Camada de arquivos(arquive) - Camada offline. Arquivos acessados raramente e armazenados por pelo menos 180 dias. Maior gasto de precisar acessar o arquivo
+
+
+
 
