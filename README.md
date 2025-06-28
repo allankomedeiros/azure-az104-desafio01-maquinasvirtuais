@@ -21,7 +21,14 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 
 ###Azure Policy
 - Garantem compliance e governança.
-- Exemplo: bloquear criação de VMs fora do Brasil ou exigir tag “Environment”.
+- É normal comparar com o ambiente on premise - GPO
+-Casos de uso:
+  -Tipos de recursos permitidos - definir padrões de recursos
+  -Definir quais o locais permitidos para criação dos recursos
+  -Exigir tag e seu valor
+-A política é aplicado a todos, independente do permissionamento
+-Pode ser criado política de remediação
+  -Exemplo: Pode ser alterado o valor de todas as referência das tags
 
 ###VNet e Peering
 - VNet é a rede virtual do Azure, equivalente a LAN no datacenter.
