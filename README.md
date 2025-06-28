@@ -68,6 +68,8 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
   -Camada de acesso frio(cold) - Pouca frequência de acesso e/ou modificação e armazenados por pelo menos 90 dias. Maior gasto se precisar acessar o arquivo
   -Camada de arquivos(arquive) - Camada offline. Arquivos acessados raramente e armazenados por pelo menos 180 dias. Maior gasto de precisar acessar o arquivo
 
+  ###Máquina virtual
+- [Modelo ARM de máquina virtual criada nos laborátórios práticos](./arm/vm.json)
 
 
 
