@@ -36,6 +36,8 @@ Este repositório faz parte do meu desafio do curso de preparação para certifi
 - **Peering** conecta VNets, permitindo comunicação sem VPN.
 - [Modelo ARM de VNet criada nos laborátórios práticos](./arm/vnet-template.json)
 - [Modelo BICEPS de VNet criada nos laborátórios práticos](./biceps/vnet-template.biceps)
+- [Modelo ARM de VNet com NSG e Peering criada nos laborátórios práticos](./arm/vmnet-nsg-peering.json)
+- [Modelo BICEPS de VNet com NSG e Peering criada nos laborátórios práticos](./biceps/vmnet-nsg-peering.biceps)
   
 ###NSG e ASG
 - **NSG (Network Security Group):** controla tráfego para subnets ou NICs.
